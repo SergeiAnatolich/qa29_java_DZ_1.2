@@ -6,12 +6,11 @@ public class Main {
         int bonusRate = 1; //бонусная ставка в рублях
         int bonus;
         if (refill > 1000){
-            score = score+refill+refill/multiplicity*bonusRate;
             bonus = refill/multiplicity*bonusRate;
-        } else {
-            score = score+refill;
+        } else {           
             bonus = 0;
         }
+        score = score+refill+bonus;
         System.out.println("Ваш баланс: " + score +
                 " рублей");
         System.out.println("Ваш бонус: " + bonus + " рублей");
